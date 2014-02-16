@@ -13,7 +13,7 @@ BACKGROUND_SETS = [
   {id: 39, scheme: 'dark'}
 ]
 
-randomIndex = (Math.random() * BACKGROUND_SETS.length).toFixed(0)
+randomIndex = Math.floor(Math.random() * BACKGROUND_SETS.length)
 chosenBg = BACKGROUND_SETS[randomIndex]
 
 $ ->
