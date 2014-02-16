@@ -15,9 +15,7 @@ html, body {
 body {
   background: $xiaomi url('../images/landscapes/39.jpg') no-repeat center;
   background-size: cover;
-  padding: 20px;
   box-sizing: border-box;
-  @include duo-center;
 
   &.dark {
     background-color: $kaoyao;
@@ -26,15 +24,16 @@ body {
 
 
 .container {
-  position: relative;
-  @include duo-center-inner;
+  height: 90%;
+  //position: relative;
+  @include duo-center;
 }
 
 .logo {
   width: $size;
   height: $size;
   position: relative;
-  margin: 0 auto;
+  @include duo-center-inner;
 
   svg {
     width: 100%;
@@ -53,6 +52,16 @@ body {
 }
 
 .share-bar {
-  margin-top: 60px;
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  opacity: .5;
+  transition: opacity 150ms;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
