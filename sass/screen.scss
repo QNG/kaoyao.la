@@ -3,12 +3,15 @@
 
 $size: 300px;
 
+$xiaomi: #ccc6a3;
+$kaoyao: #4d385c;
+
 html, body, .container {
   height: 100%;
 }
 
 body {
-  background-color: red;
+  background-color: $xiaomi;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -20,14 +23,19 @@ body {
 .logo {
   width: $size;
   height: $size;
-  background-color: blue;
   position: relative;
   top: 50%;
   margin: ($size * -0.5) auto 0;
-}
-.logo-title {
-  text-align: center;
-  font-size: 60px;
-  line-height: $size;
-  -webkit-animation: rotate 5s infinite;
+
+  svg {
+    width: 100%;
+    height: percentage(686/666);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  svg#kaoyao-text {
+    -webkit-animation: rotate 5s infinite;
+    animation: rotate 5s infinite;
+  }
 }
