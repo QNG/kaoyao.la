@@ -3,6 +3,7 @@
 @import "mixins";
 
 $size: 300px;
+$speed: 7s;
 
 $xiaomi: #ccc6a3;
 $kaoyao: #4d385c;
@@ -16,7 +17,12 @@ body {
   padding: 20px;
   box-sizing: border-box;
   @include duo-center;
+
+  &.dark {
+    background-color: $kaoyao;
+  }
 }
+
 
 .container {
   position: relative;
@@ -35,10 +41,13 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+
+    .light & path { fill: $kaoyao; } // Dark text on light bg
+    .dark  & path { fill: $xiaomi; } // Light text on dark bg
   }
   svg#kaoyao-text {
-    -webkit-animation: rotate 5s infinite;
-    animation: rotate 5s infinite;
+    -webkit-animation: rotate $speed infinite;
+    animation: rotate $speed infinite;
   }
 }
 
