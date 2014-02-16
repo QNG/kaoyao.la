@@ -13,13 +13,20 @@ html, body {
 }
 
 body {
-  background: $xiaomi url('../images/landscapes/39.jpg') no-repeat center;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   box-sizing: border-box;
+}
 
-  &.dark {
-    background-color: $kaoyao;
-  }
+.light {
+  // Dark text on light bg
+  background-color: $xiaomi;
+  svg path { fill: $kaoyao }
+}
+.dark { // Light text on dark bg
+  background-color: $kaoyao;
+  svg path { fill: $xiaomi }
 }
 
 
@@ -41,9 +48,6 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-
-    .light & path { fill: $kaoyao; } // Dark text on light bg
-    .dark  & path { fill: $xiaomi; } // Light text on dark bg
   }
   svg#kaoyao-text {
     -webkit-animation: rotate $speed infinite;
