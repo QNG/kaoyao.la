@@ -1,0 +1,17 @@
+@mixin duo-center {
+  text-align: center;
+  font-size: 0;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+@mixin duo-center-inner {
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: middle;
+}

@@ -1,12 +1,13 @@
 @import "compass/reset";
 @import "keyframes";
+@import "mixins";
 
 $size: 300px;
 
 $xiaomi: #ccc6a3;
 $kaoyao: #4d385c;
 
-html, body, .container {
+html, body {
   height: 100%;
 }
 
@@ -14,18 +15,19 @@ body {
   background-color: $xiaomi;
   padding: 20px;
   box-sizing: border-box;
+  @include duo-center;
 }
 
 .container {
   position: relative;
+  @include duo-center-inner;
 }
 
 .logo {
   width: $size;
   height: $size;
   position: relative;
-  top: 50%;
-  margin: ($size * -0.5) auto 0;
+  margin: 0 auto;
 
   svg {
     width: 100%;
@@ -39,3 +41,8 @@ body {
     animation: rotate 5s infinite;
   }
 }
+
+.share-bar {
+  margin-top: 30px;
+}
+
